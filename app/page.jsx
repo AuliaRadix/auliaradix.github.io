@@ -49,6 +49,14 @@ function WhatsAppIcon({ className = "w-4 h-4" }) {
   );
 }
 
+function LinkedinIcon({ className = "w-4 h-4" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+    </svg>
+  );
+}
+
 export default function PortfolioV2() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [inquiryName, setInquiryName] = useState('');
@@ -421,6 +429,16 @@ export default function PortfolioV2() {
                 >
                   <GithubIcon className="w-4 h-4" />
                   <span>GitHub</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/auliaradixputrawinarko"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/80 border border-slate-300/80 text-slate-700 font-medium text-sm hover:bg-white hover:text-blue-700 hover:border-blue-300 transition shadow-sm"
+                >
+                  <LinkedinIcon className="w-4 h-4 text-blue-600" />
+                  <span>LinkedIn</span>
                 </a>
               </div>
 
@@ -979,8 +997,27 @@ export default function PortfolioV2() {
             <span>•</span>
             <span>Telkom University Kampus Purwokerto</span>
           </div>
-          <div>
-            Portofolio v2 • Didesain dengan estetika modern glassmorphism (Anti-AI Slop).
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/AuliaRadix"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-600 hover:text-slate-900 transition flex items-center gap-1"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/auliaradixputrawinarko"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-600 hover:text-blue-600 transition flex items-center gap-1"
+            >
+              <LinkedinIcon className="w-3.5 h-3.5" />
+              <span>LinkedIn</span>
+            </a>
+            <span>•</span>
+            <span>Portofolio v2 (Modern Glassmorphism)</span>
           </div>
         </div>
       </footer>
